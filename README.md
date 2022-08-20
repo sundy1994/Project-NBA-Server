@@ -1,11 +1,13 @@
 # Project: Analysis and Modeling of Traffic Accidents in US
-**Key Words:**  SQL, JAVA Script, HTML, Relational Database, AWS, Web Application, Data Wrangling, EDA, Query Optimization
+**Key Words:**  SQL, JAVA Script, HTML, Node JS, React JS, Relational Database, Data Wrangling, EDA, Data Grip, AWS, Web Application, Query Optimization
 
 
 ## Overview:
 Basketball, the third most popular sport in the United States, based on viewership, has also captured the attention from around the world in the past several decades (Ghoshal). While the sport solidified its status as a household name, basketball and the current NBA landscape can still be foreign to many of those who do not regularly watch sports. We would go a step further in arguing that basketball and the NBA can be daunting for newcomers. We, individually, have friends or met people who often ask, “where I do start?”, “which team should I follow,” or “why is it so complicated?” 
 
 The main goal of this project is to get users, who do not follow basketball, to become more acquainted with current basketball players and NBA teams. Like an art gallery, we want to create an interactive website that allows users to discover new players and teams and build their own dream team. Since there are plenty of basketball players, the app will provide information about starting players of each team and give player statistics and other relevant information, including suggestions of other players with similar statistics. The app will also draw attention to the relationship between NBA and US Colleges and highlight how alumni performance reflects on colleges. We also aim to give users a sense of the financial aspect of professional sports through exposure to player salaries and team building. 
+
+To do these, we selected several data sets, cleaned with Pandas in Python and rearranged them to several relational tables. After uploading them to Relational Database Service (RDS) of AWS (Amazon Web Services) through Data Grip, we started to build the web application based on Node JS and React JS. The backend included many complex SQL queries that can retrive data from the database, while the front end has 4 pages: Home, Matches, Players and Teams, allowing users to build there own team of five and search for contents they are interested. The detailed video description of thes web application can be found [here]().
 
 
 ## Data Sources
@@ -95,4 +97,11 @@ This provides information regarding all the 2020 season players. This table come
 **IMPACT_FG**: Free Throw - league average
 
 All 3 stats are the higher the better
+
+
+## Relational Database
+
+Before uploading our datasets, we reviewed relationships between certain tables and each of the primary keys and foreign keys. We verified that the data is in 2NF, meaning that there were no partial dependencies. Moreover, for the tables that have more than one primary keys, we did not find any transitive dependencies to ensure that our dataset is in 3NF. To verify the accuracy and validity of the tables, we looked at specific teams and queried statistics for more well-known players such as Lebron James, Stephen Curry, and Nikola Jokić to verify that games table and players_info tables are providing reliable information, given some margin of error. While reviewing table relationships, we also created an ER diagram of the different tables, mapping the different relationships and existing between tables cardinalities.  
+
+![ER Diagram]()
 
