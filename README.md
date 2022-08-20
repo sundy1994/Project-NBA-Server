@@ -101,7 +101,23 @@ All 3 stats are the higher the better
 
 ## Relational Database
 
-Before uploading our datasets, we reviewed relationships between certain tables and each of the primary keys and foreign keys. We verified that the data is in 2NF, meaning that there were no partial dependencies. Moreover, for the tables that have more than one primary keys, we did not find any transitive dependencies to ensure that our dataset is in 3NF. To verify the accuracy and validity of the tables, we looked at specific teams and queried statistics for more well-known players such as Lebron James, Stephen Curry, and Nikola Jokić to verify that games table and players_info tables are providing reliable information, given some margin of error. While reviewing table relationships, we also created an ER diagram of the different tables, mapping the different relationships and existing between tables cardinalities.  
+Before uploading our datasets, we reviewed relationships between certain tables and each of the primary keys and foreign keys. We verified that the data is in 2NF, meaning that there were no partial dependencies. Moreover, for the tables that have more than one primary keys, we did not find any transitive dependencies to ensure that our dataset is in 3NF. To verify the accuracy and validity of the tables, we looked at specific teams and queried statistics for more well-known players such as Lebron James, Stephen Curry, and Nikola Jokić to verify that games table and players_info tables are providing reliable information, given some margin of error. While reviewing table relationships, we also created an ER diagram of the different tables, mapping the different relationships and existing between tables cardinalities (see below).  
 
-![ER Diagram]()
+![ER Diagram](https://github.com/sundy1994/Project-NBA-Server/blob/main/images/FINAL_ER.png)
 
+
+## Description of system architecture
+
+The following describes the web pages of our NBA website and individual goals of each page:
+
+**Home Page**:
+The home page contains a Team-Building application, allowing users to search for players and add them to create an NBA team of 5. In the searching section, users can search for active players in season 2020-2021 by their name, position as well as annual salary. The search results also contain their stats for the entire season and can be sorted by these stats and salary. Users can choose the players they want by clicking the ‘add’ button. The selected players will be shown in the ‘Your Dream Team’ section as a group of cards along with their photos, and the total salary will be calculated. Users can click the remove button to remove current players and add new ones. The maximum number of the team is 5 and a player cannot be added multiple times.
+
+**Matches Page**:
+The main purpose of this page is to provide a detailed statistical information for specific games. In the game table, users can custom year, month, and date to search for games held in specific date. Parameter change is accomplished by 3 select menus and could not be blank. The default time to display games is 2019-12-01, can jump to any day. By clicking the row on the games table, you will get detailed box score information of the specific games you selected below the table. It provides a brief insight of the competitive performance for each player of the away and home teams.
+
+**Players Page**:
+The main purpose of this page is to provide an overview of all the NBA players in the most recent season as well as draw attention to the relationship between US colleges, players and NBA. The player’s page is structured to allow the user to learn about a randomly generated college basketball team – specifically average wins and losses and NBA career length of players from those schools. Each page refresh generates a new college 
+
+**Teams Page**:
+The main purpose of this page is to provide detailed information of each NBA team and to allow the user to become more acquainted with current NBA landscape regarding teams and overall standings. The teams page is structured to let the user intuitively navigate to each team’s respective information regarding team roster, season game schedule, overall standings, and team background, including ownership and management team. While the information may seem basic, this page has several complex queries that compile game schedules, identify similar (or rival) players based on a particular player’s statistics by calculating similarity value, and each individual team’s overall season statistics. 
