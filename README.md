@@ -7,7 +7,12 @@ Basketball, the third most popular sport in the United States, based on viewersh
 
 The main goal of this project is to get users, who do not follow basketball, to become more acquainted with current basketball players and NBA teams. Like an art gallery, we want to create an interactive website that allows users to discover new players and teams and build their own dream team. Since there are plenty of basketball players, the app will provide information about starting players of each team and give player statistics and other relevant information, including suggestions of other players with similar statistics. The app will also draw attention to the relationship between NBA and US Colleges and highlight how alumni performance reflects on colleges. We also aim to give users a sense of the financial aspect of professional sports through exposure to player salaries and team building. 
 
-To do these, we selected several data sets, cleaned with Pandas in Python and rearranged them to several relational tables. After uploading them to Relational Database Service (RDS) of AWS (Amazon Web Services) through Data Grip, we started to build the web application based on Node JS and React JS. The backend included many complex SQL queries that can retrive data from the database, while the front end has 4 pages: Home, Matches, Players and Teams, allowing users to build there own team of five and search for contents they are interested. The detailed video description of thes web application can be found [here]().
+To do these, we selected several data sets, cleaned with Pandas in Python and rearranged them to several relational tables. After uploading them to Relational Database Service (RDS) of AWS (Amazon Web Services) through Data Grip, we started to build the web application based on Node JS and React JS. The backend included many complex SQL queries that can retrive data from the database, while the front end has 4 pages: Home, Matches, Players and Teams, allowing users to build there own team of five and search for contents they are interested. See video below for more detailed description of thes web application.
+
+
+
+https://user-images.githubusercontent.com/92217557/185768934-57237cb0-6e4c-4d3f-9373-89e338df6049.mp4
+
 
 
 ## Data Sources
@@ -108,7 +113,7 @@ Before uploading our datasets, we reviewed relationships between certain tables 
 
 ## Description of system architecture
 
-The following describes the web pages of our NBA website and individual goals of each page:
+The following describes the web pages of our NBA website and individual goals of each page (Again, please see video above):
 
 **Home Page**:
 The home page contains a Team-Building application, allowing users to search for players and add them to create an NBA team of 5. In the searching section, users can search for active players in season 2020-2021 by their name, position as well as annual salary. The search results also contain their stats for the entire season and can be sorted by these stats and salary. Users can choose the players they want by clicking the ‘add’ button. The selected players will be shown in the ‘Your Dream Team’ section as a group of cards along with their photos, and the total salary will be calculated. Users can click the remove button to remove current players and add new ones. The maximum number of the team is 5 and a player cannot be added multiple times.
