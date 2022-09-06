@@ -1,4 +1,4 @@
-# Project: Analysis and Modeling of Traffic Accidents in US
+# Project: NBA Database Server Website
 **Key Words:**  SQL, JAVA Script, HTML, Node JS, React JS, Relational Database, Data Wrangling, EDA, Data Grip, AWS, Web Application, Query Optimization
 
 
